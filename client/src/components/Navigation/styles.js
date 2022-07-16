@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const HeaderSection = styled.nav`
   height: 9rem;
-  border-bottom: 0.1rem solid ${props => props.theme.variant.primary};
+  /* border-bottom: 0.1rem solid ${props => props.theme.variant.primary}; */
   position: relative;
   display: flex;
   align-items: center;
@@ -19,33 +19,35 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 5rem;
   @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
 export const NavLinks = styled(NavLink)`
   text-transform: capitalize;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
+
+  font-size: 1.953rem;
+  padding-bottom: 0.3rem;
   color: ${props => props.theme.variant.primary};
-  font-family: ${props => props.theme.fontFamily.header};
+  font-family: ${props => props.theme.fontFamily.main};
   opacity: 1;
+  transition: color 0.2s ease-in-out;
+  font-style: italic;
+  &.active {
+    border-bottom: 1px solid ${props => props.theme.variant.primary};
+  }
+  &:hover {
+    color: ${props => props.theme.variant.tertiary};
+  }
   @media screen and (max-width: 1024px) {
-    font-size: 2.4rem;
+    font-size: 5.96rem;
   }
 `;
 
 export const Logo = styled.img`
   height: 35px;
   margin-left: 25px;
-`;
-
-export const Button = styled.div`
-  height: 35px;
-  width: 35px;
 `;
 
 export const IconBar = styled.div`

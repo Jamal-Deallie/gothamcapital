@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import {
   ButtonContainer,
   ButtonImage,
@@ -10,19 +10,18 @@ import {
   VideoContainer,
   Hover,
   Video,
+  Italic,
 } from './styles';
-import { MainButton } from '../../components';
-import { useNavigate } from 'react-router-dom';
-import { hoverOnEnter, hoverOnLeave } from '../../animations/hoverAnimations';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import useArrayRef from '../../hooks/useArrayRef';
+import { heroAnimation } from '../../animations/heroAnimation';
 
 export default function HeroContainer() {
-  let navigate = useNavigate();
+  const containerRef = useRef();
   const btnRef = useRef();
+  const [headingRef, setHeadingRef] = useArrayRef();
 
-  function handleClick() {
-    navigate('about');
-  }
   const hoverOnEnter = () => {
     gsap.to(btnRef.current, { clipPath: 'circle(100%)' });
   };
@@ -31,20 +30,30 @@ export default function HeroContainer() {
     gsap.to(btnRef.current, { clipPath: 'circle(0%)' });
   };
 
+  useEffect(() => {
+    heroAnimation(headingRef.current);
+  }, [headingRef]);
+
   return (
     <HeroSection>
-      <GridContainer>
+      <GridContainer ref={containerRef}>
         <ContentContainer>
           <HeaderContainer>
-            <Heading>For Pioneers</Heading>
-            <Heading>And Investors</Heading>
+            <Heading ref={setHeadingRef}>
+              For <Italic>Pioneers</Italic>
+            </Heading>
+            <Heading ref={setHeadingRef}>
+              <Italic>And</Italic> Investors
+            </Heading>
           </HeaderContainer>
 
           <ButtonContainer
             onMouseEnter={hoverOnEnter}
             onMouseLeave={hoverOnLeave}>
             <Hover ref={btnRef} />
-            <ButtonImage src='images/icons/gotham.svg' alt='Gotham Capital' />
+            <Link to='about'>
+              <ButtonImage src='images/icons/gotham.svg' alt='Gotham Capital' />
+            </Link>
           </ButtonContainer>
         </ContentContainer>
 

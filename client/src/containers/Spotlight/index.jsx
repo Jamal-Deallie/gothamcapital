@@ -1,71 +1,22 @@
 import React, { useRef, useEffect } from 'react';
-import {
-  Text,
-  Heading,
-  Title,
-  Wrapper,
-  Desc,
-  Container,
-  ContentContainer,
-  Image,
-  Section,
-  Button,
-  CEOImage,
-  LogoImage,
-} from './styles';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SplitText } from 'gsap/SplitText';
+import { Text, Wrapper, Section, CEOImage, LogoImage } from './styles';
+import { spotlightAnimation } from '../../animations/spotlightAnimation';
 
 export default function SpotlightContainer() {
-  const containerRef = useRef(null);
-  const imageRef = useRef(null);
-  const textRef = useRef(null);
-  const headerRef = useRef(null);
+  const containerRef = useRef();
+  const imageRef = useRef();
+  const textRef = useRef();
+  const headerRef = useRef();
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     gsap.registerPlugin(ScrollTrigger);
-  //     gsap.registerPlugin(SplitText);
-  //     const splitText = new SplitText(textRef.current, {
-  //       type: 'lines',
-  //       linesClass: 'lineChildren',
-  //     });
-  //     const tl = gsap
-  //       .timeline()
-  //       .from(headerRef.current, {
-  //         duration: 1,
-  //         opacity: 0,
-  //         ease: 'power2',
-  //       })
-  //       .from(splitText.lines, {
-  //         duration: 0.75,
-  //         y: 100,
-  //         opacity: 0,
-  //         ease: 'power2',
-  //         stagger: {
-  //           amount: 0.2,
-  //         },
-  //       })
-  //       .from(imageRef.current, {
-  //         duration: 1.3,
-  //         opacity: 0,
-  //         ease: 'circ.out',
-  //       });
-  //     ScrollTrigger.create({
-  //       trigger: containerRef.current,
-  //       markers: true,
-  //       start: 'top center',
-  //       end: 'bottom 30px',
-  //       toggleActions: 'play none none reverse',
-  //       animation: tl,
-  //       immediateRender: false,
-  //     });
-  //     return () => {
-  //       ScrollTrigger.kill();
-  //     };
-  //   }, 10);
-  // }, [containerRef, imageRef, headerRef]);
+  useEffect(() => {
+    spotlightAnimation(
+      headerRef.current,
+      textRef.current,
+      imageRef.current,
+      containerRef.current
+    );
+  });
+
   return (
     <Section ref={containerRef}>
       <Wrapper>

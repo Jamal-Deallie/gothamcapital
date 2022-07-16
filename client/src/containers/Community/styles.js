@@ -12,6 +12,7 @@ export const Box = styled.div`
 export const Container = styled.div`
   max-width: 120rem;
   margin: 0 auto;
+  overflow: hidden;
 `;
 
 export const CommunitySection = styled.section`

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: 9.5rem 0 12rem 0;
+  padding: ${props => (props.$pad ? props.$pad : '9.5rem 0 12rem 0')};
   width: 100%;
 `;
 
@@ -23,12 +23,7 @@ export const InnerContainer = styled.div`
   padding: calc(2px + 1.5625vw);
 `;
 
-export const ContentContainer = styled.div`
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-`;
+export const ContentContainer = styled.div``;
 
 export const Heading = styled.h1`
   font-family: ${props => props.theme.fontFamily.heading};
@@ -37,29 +32,35 @@ export const Heading = styled.h1`
   line-height: 1.2;
   text-align: left;
   margin-bottom: 3.5rem;
+  @media screen and (max-width: 800px) {
+    text-align: center;
+  }
 `;
 
 export const Desc = styled.p`
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-family: ${props => props.theme.fontFamily.main};
   color: ${props => props.theme.variant.tertiary};
   line-height: 1.5;
   text-align: left;
-  font-style: italic;
   @media screen and (max-width: 800px) {
-    /* text-align: center; */
+    text-align: center;
   }
 `;
 
 export const Image = styled.img`
   width: 100%;
-  max-width: 37.5rem;
+  max-width: 47.5rem;
   filter: ${props => (props.$filter ? 'grayscale(100%)' : 'none')};
 `;
 
-export const Container = styled.div`
+export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  order: ${props => (props.$order ? -1 : 2)};
+  @media screen and (max-width: 800px) {
+    order: 2;
+  }
 `;

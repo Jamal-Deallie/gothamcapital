@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const Section = styled.section`
   width: 100%;
-  padding-top: 50px;
+  padding: 9.5rem 0 12rem 0;
 `;
 
 export const Heading = styled.h1`
@@ -9,7 +9,6 @@ export const Heading = styled.h1`
   font-family: ${props => props.theme.fontFamily.heading};
   font-size: clamp(2.16rem, calc(1.4rem + 3.79vw), 4.8rem);
   font-weight: 800;
-  font-style: italic;
   line-height: 1.2;
   text-align: left;
   margin-bottom: 3.5rem;
@@ -17,14 +16,15 @@ export const Heading = styled.h1`
 
 export const Text = styled.p`
   color: ${props => props.theme.variant.primary};
-  font-family: ${props => props.theme.fontFamily.main}
+  font-size: 2.4rem;
+  font-family: ${props => props.theme.fontFamily.main};
   margin: 2.5rem 0;
   text-align: center;
   line-height: 1.2;
 `;
 
 export const TextWrapper = styled.div`
-  width: 35rem;
+  max-width: 45rem;
 `;
 
 export const Title = styled.p`
@@ -43,21 +43,22 @@ export const Desc = styled.p`
 export const StyledInput = styled.input`
   background: transparent;
   border: 1px solid ${props => props.theme.variant.primary};
-  height: 45px;
-  max-width: 55rem;
-  min-width: 35rem;
+  font-family: ${props => props.theme.fontFamily.main};
+  height: 4.5rem;
+  max-width: 65rem;
+  width: 100%;
   border-radius: 3px;
   border-style: solid;
   border-width: 0.125rem;
   margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-size: 1.65rem;
+  font-style: italic;
+  color: ${props => props.theme.variant.tertiary};
+  padding-left: 1rem;
   &::placeholder {
     color: ${props => props.theme.variant.primary};
-    font-family: ${props => props.theme.fontFamily.main};
-    font-weight: 300;
-    letter-spacing: -0.01em;
-    padding-left: 1rem;
-    font-size: 1.65rem;
-    font-style: italic;
   }
 `;
 
@@ -73,7 +74,7 @@ export const Button = styled.button`
   font-size: 1.65rem;
   cursor: pointer;
   display: inline-block;
-  padding: 7.5px 30px;
+  padding: 9.5px 30px;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -85,27 +86,35 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 65rem;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: ${props => props.theme.variant.primary};
+    color: ${props => props.theme.variant.secondary};
+  }
 `;
 
 export const TextArea = styled.textarea`
   width: 100%;
   height: 250px;
   background: transparent;
+  color: ${props => props.theme.variant.tertiary};
   border: 1px solid ${props => props.theme.variant.primary};
+  font-family: ${props => props.theme.fontFamily.main};
   border-radius: 3px;
   border-width: 0.125rem;
   border-style: solid;
   border-radius: 3px;
   margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  font-size: 1.65rem;
+  font-style: italic;
   &::placeholder {
     color: ${props => props.theme.variant.primary};
-    font-family: ${props => props.theme.fontFamily.main};
-    font-weight: 300;
-    letter-spacing: -0.01em;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    font-size: 1.65rem;
-    font-style: italic;
   }
 `;
 
@@ -114,10 +123,11 @@ export const Image = styled.img`
 `;
 
 export const OuterContainer = styled.div`
-  margin-top: 5.5rem;
   display: flex;
-  width: 50rem;
-
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 150rem;
+  width: 100%;
 `;
 
 export const InnerContainer = styled.div`
@@ -129,14 +139,12 @@ export const InnerContainer = styled.div`
 `;
 
 export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  max-width: 150rem;
-  width: 100%;
+  padding: 0 calc(8px + 1.5625vw);
 `;
 
 export const Container = styled.div`
-  max-width: 800px;
+  max-width: 80rem;
+  background: yellow;
 `;
 
 export const Info = styled.div`

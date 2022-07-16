@@ -31,6 +31,7 @@ export const Heading = styled.h1`
 
 export const Text = styled.p`
   color: ${props => props.theme.variant.primary};
+  font-family: ${props => props.theme.fontFamily.main};
   font-size: clamp(1.2rem, calc(0.81rem + 1.93vw), 2.19rem);
   letter-spacing: 0.5px;
   padding-bottom: 5rem;

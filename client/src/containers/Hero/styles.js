@@ -25,11 +25,15 @@ export const Heading = styled.h1`
   font-family: ${props => props.theme.fontFamily.heading};
   font-size: 12.25rem;
   color: ${props => props.theme.variant.tertiary};
-  font-style: italic;
   font-weight: 300;
+  overflow: hidden;
   @media screen and (max-width: 800px) {
     font-size: 9rem;
   }
+`;
+
+export const Italic = styled.span`
+  font-style: italic;
 `;
 
 export const ButtonContainer = styled.div`
@@ -91,7 +95,6 @@ export const GridContainer = styled.div`
   overflow: hidden;
   @media screen and (max-width: 800px) {
     width: 100%;
-
   }
 `;
 
@@ -119,6 +122,5 @@ export const Video = styled.video`
     height: calc(100vh-9rem);
     z-index: -1;
     filter: brightness(75%);
-  
   }
 `;

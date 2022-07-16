@@ -4,8 +4,6 @@ import {
   Container,
   NavLinks,
   Logo,
-  Hamburger,
-  Button,
   IconBar,
   ToggleBtn,
   MobileContainer,
@@ -22,7 +20,7 @@ export default function Navigation() {
   const [iconRef, setIconRef] = useArrayRef();
   const [linkRef, setLinkRef] = useArrayRef();
   const [toggle, setToggle] = useState(false);
-
+  console.log(toggle);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     tl.current = gsap.timeline({ pause: true });
@@ -55,13 +53,9 @@ export default function Navigation() {
       });
   }, [tl, iconRef, linkRef, menuRef]);
 
-  let links = NavItems.map(item => {
-    return (
-      <li key={item.id} ref={setLinkRef}>
-        <NavLinks to={item.link}>{item.label}</NavLinks>
-      </li>
-    );
-  });
+  const handleClick = () => {
+    setToggle(toggle => !toggle);
+  };
 
   useEffect(() => {
     toggle ? tl.current.play() : tl.current.reverse();
@@ -70,19 +64,36 @@ export default function Navigation() {
     } else {
       document.body.classList.remove('no-scroll');
     }
-  },[tl, toggle]);
+  }, [tl, toggle]);
 
   return (
     <HeaderSection>
       <Link to='/'>
         <Logo src='/images/logos/logo.svg' alt='Gotham Logo' />
       </Link>
-      <Container>{links}</Container>
-      <MobileContainer ref={menuRef}>{links}</MobileContainer>
-      <ToggleBtn
-        onClick={() => {
-          setToggle(toggle => !toggle);
-        }}>
+      <Container>
+        {NavItems.map(item => {
+          return (
+            <NavLinks key={item.id} ref={setLinkRef} to={item.link}>
+              {item.label}
+            </NavLinks>
+          );
+        })}
+      </Container>
+      <MobileContainer ref={menuRef}>
+        {NavItems.map(item => {
+          return (
+            <NavLinks
+              key={item.id}
+              ref={setLinkRef}
+              to={item.link}
+              onClick={handleClick}>
+              {item.label}
+            </NavLinks>
+          );
+        })}
+      </MobileContainer>
+      <ToggleBtn onClick={handleClick}>
         <IconBar ref={setIconRef} />
         <IconBar ref={setIconRef} />
         <IconBar ref={setIconRef} />

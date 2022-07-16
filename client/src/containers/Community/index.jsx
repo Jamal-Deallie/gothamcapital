@@ -12,8 +12,16 @@ import {
 import { CommunityData as data } from '../../shared/sharedData';
 import useArrayRef from '../../hooks/useArrayRef';
 import { horizontalLoop } from '../../animations/horizontalLoop';
+import { headerAnimation } from '../../animations/headerAnimation';
 
 export default function CommunityContainer() {
+  const headerRef = useRef();
+  const containerRef = useRef();
+
+  useEffect(() => {
+    headerAnimation(headerRef.current, containerRef.current);
+  });
+
   const config = {
     draggable: true,
     center: false,
@@ -31,8 +39,8 @@ export default function CommunityContainer() {
   return (
     <CommunitySection>
       <OuterContainer>
-        <Container>
-          <Heading>Community Partners</Heading>
+        <Container ref={containerRef}>
+          <Heading ref={headerRef}>Community Partners</Heading>
         </Container>
         <Section>
           <Wrapper>

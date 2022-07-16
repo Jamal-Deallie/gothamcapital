@@ -2,6 +2,7 @@ const express = require('express');
 
 const fundRouter = require('./routes/fundsRoutes');
 const registrationRouter = require('./routes/registrationRoutes');
+const contactRouter = require('./routes/contactRoutes');
 const employeeRouter = require('./routes/employeeRoutes');
 const cors = require('cors');
 const AppError = require('./utils/appError');
@@ -43,6 +44,7 @@ app.use((req, res, next) => {
 app.use('/api/test/v1/funds', fundRouter);
 app.use('/api/test/v1/registration', registrationRouter);
 app.use('/api/test/v1/employee', employeeRouter);
+app.use('/api/test/v1/contactus', contactRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

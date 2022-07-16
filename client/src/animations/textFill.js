@@ -6,8 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 export const textFill = (textElem, containerElem) => {
   //register ScrollTrigger & SplitText
 
-
-
   const animation = gsap.to(textElem, {
     backgroundImage:
       'linear-gradient(90deg, #f3f3f3  0%, #f3f3f3  100%, #444 100%)',
@@ -21,7 +19,6 @@ export const textFill = (textElem, containerElem) => {
 
   ScrollTrigger.create({
     trigger: containerElem,
-    markers: true,
     start: 'top center',
     end: 'bottom',
     animation: animation,

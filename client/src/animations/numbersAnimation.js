@@ -34,7 +34,6 @@ export const numbersAnimation = (headingElem, statElem, containerElem) => {
 
   ScrollTrigger.create({
     trigger: containerElem,
-    markers: true,
     start: 'top center',
     end: 'bottom 30px',
     toggleActions: 'play none none reverse',

@@ -15,7 +15,6 @@ export const Heading = styled.h1`
   color: ${props => props.theme.variant.primary};
   font-family: ${props => props.theme.fontFamily.header};
   font-size: clamp(2.16rem, calc(1.17rem + 4.93vw), 4.69rem);
-  font-style: italic;
   overflow: hidden;
 `;
 
@@ -26,7 +25,6 @@ export const Text = styled.p`
   font-style: italic;
   padding: 2.5rem 0;
   overflow: hidden;
-
 `;
 
 export const Subheader = styled.p`

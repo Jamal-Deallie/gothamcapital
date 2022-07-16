@@ -170,7 +170,7 @@ h6 {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Abril Fatface';
+  font-family: 'freight-display-pro, serif';
   vertical-align: baseline;
 }
 h1 {
@@ -182,4 +182,5 @@ h2 {
 }
 p {
   font-size: 1.618rem;
+  font-size: 'muli, sans-serif';
 }

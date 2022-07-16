@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
-export const Column = styled.div``;
+export const Column = styled.div`
+  overflow: hidden;
+`;
 
 export const ColumnInner = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100%;
-  max-width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const Container = styled.div`
@@ -17,7 +18,7 @@ export const Container = styled.div`
 export const Heading = styled.h1`
   color: ${props => props.theme.variant.secondary};
   font-family: ${props => props.theme.fontFamily.heading};
-  font-size: clamp(2.16rem, calc(1.40rem + 3.79vw), 4.8rem);
+  font-size: clamp(2.16rem, calc(1.4rem + 3.79vw), 4.8rem);
   font-weight: 800;
   line-height: 1.2;
   text-align: left;
@@ -31,6 +32,7 @@ export const ContentContainer = styled.div`
   overflow: hidden;
   padding: 1rem;
   margin-bottom: 4.5rem;
+  overflow: hidden;
 `;
 export const Desc = styled.p`
   color: ${props => props.theme.variant.secondary};
@@ -39,11 +41,11 @@ export const Desc = styled.p`
   max-width: 50rem;
 `;
 export const GridContainer = styled.div`
+  max-width: 120rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  max-width: 90rem;
-  grid-gap: 7.5rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `;
 
 export const Icon = styled.img`
@@ -52,9 +54,6 @@ export const Icon = styled.img`
 export const Section = styled.section`
   width: 100%;
   background: #f3f3f3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 10.5rem 0;
 `;
 
@@ -77,9 +76,6 @@ export const Title = styled.h2`
 
 export const Wrapper = styled.div`
   padding: 1rem;
-  max-width: 150rem;
+  max-width: 120rem;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;

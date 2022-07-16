@@ -9,12 +9,13 @@ import {
   WorkingContainer,
   SpotlightContainer,
   AwardsContainer,
+  TeamJumboContainer
 } from '../../containers';
 
 export default function TeamsPage() {
   return (
     <>
-      <Jumbotron title='Our Team' />
+      <TeamJumboContainer/>
       <SpotlightContainer />
       {/* <DiversityContainer /> */}
       {/* <LeadershipContainer />

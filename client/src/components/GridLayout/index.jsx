@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import {
   ContentContainer,
-  Container,
+  ImageContainer,
   Desc,
   GridContainer,
   Heading,
@@ -11,7 +11,15 @@ import {
 } from './styles';
 import { gridAnimation } from '../../animations/gridAnimation';
 
-export default function GridLayout({ heading, desc, img, alt, filter }) {
+export default function GridLayout({
+  heading,
+  desc,
+  img,
+  alt,
+  filter,
+  pad,
+  order,
+}) {
   const textRef = useRef();
   const headerRef = useRef();
   const containerRef = useRef();
@@ -23,9 +31,11 @@ export default function GridLayout({ heading, desc, img, alt, filter }) {
       imageRef.current,
       containerRef.current
     );
-  });
+  }, [gridAnimation]);
+
+  
   return (
-    <Section>
+    <Section $pad={pad}>
       <GridContainer ref={containerRef}>
         <ContentContainer>
           <InnerContainer>
@@ -33,9 +43,9 @@ export default function GridLayout({ heading, desc, img, alt, filter }) {
             <Desc ref={textRef}>{desc}</Desc>
           </InnerContainer>
         </ContentContainer>
-        <Container>
+        <ImageContainer $order={order}>
           <Image src={img} alt={alt} $filter={filter} ref={imageRef} />
-        </Container>
+        </ImageContainer>
       </GridContainer>
     </Section>
   );

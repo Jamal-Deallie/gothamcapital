@@ -2,18 +2,20 @@ import styled from 'styled-components';
 
 export const JumbotronSection = styled.div`
   position: relative;
-  height: calc(100vh - 15rem);
+  height: calc(100vh - 9rem);
   overflow: hidden;
 `;
 
 export const Heading = styled.h1`
   font-family: ${props => props.theme.fontFamily.heading};
-  font-size: 12.25rem;
+  font-size: clamp(3.052rem, calc(1.53rem + 13.81vw), 11.37rem);
   color: ${props => props.theme.variant.primary};
-
+  text-transform: capitalize;
   font-weight: 300;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.6);
+
   @media screen and (max-width: 800px) {
-    font-size: 9rem;
+    font-size: 7.5rem;
   }
 `;
 
@@ -22,78 +24,70 @@ export const Italic = styled.span`
 `;
 
 export const ContentContainer = styled.div`
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  grid-area: 1/4/2/2;
-`;
-
-export const InnerContainer = styled.div``;
-
-export const HeaderContainer = styled.div`
-  margin-top: calc(2rem + 10.5625vw);
-`;
-
-export const ButtonImage = styled.img`
-  z-index: 2;
-  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
-  width: 19rem;
-  padding: 1.5rem;
-  margin-left: 1rem;
-  /* margin-left: 1rem; */
-  text-shadow: 2px 2px #000000;
-  @media screen and (max-width: 800px) {
-    width: 19rem;
-    padding: 1.5rem;
-    margin-left: 1rem;
-    /* margin-left: 1rem; */
-    text-shadow: 2px 2px #000000;
+  padding: calc(8px + 1.5625vw);
+  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  margin-top: 15%;
+  margin-left: 7%;
+  @media screen and (max-width: 900px) {
+    padding: 1rem;
+    grid-column-end: 4;
   }
 `;
+
+export const InnerContainer = styled.div`
+  position: relative;
+  left: -2%;
+  grid-column-end: 5;
+  grid-column-start: 3;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  justify-self: end;
+`;
+
+export const HeaderContainer = styled.div``;
+
 export const Text = styled.p`
-  font-size: 1.8rem;
+  font-size: clamp(1.41rem, calc(1.21rem + 0.98vw), 1.91rem);
   font-family: ${props => props.theme.fontFamily.main};
-  color: ${props => props.theme.variant.tertiary};
-  width: 50ch;
+  color: ${props => props.theme.variant.primary};
+  max-width: 50ch;
   line-height: 1.5;
+  margin-top: 3.5rem;
+  max-width: 45ch;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.6);
 `;
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: auto minmax(20px, 290px) minmax(20px, 850px) auto;
-  grid-template-rows: auto;
+  position: relative;
+  grid-auto-columns: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: 7.5% 1fr 0.75fr 7.5%;
   overflow: hidden;
   @media screen and (max-width: 800px) {
-    width: 100%;
   }
 `;
 
-export const Container = styled.div``;
-
 export const ImageContainer = styled.div`
-  grid-area: 1/3/2/4;
-  width: 100%;
-  margin-top: 6.5rem;
+  grid-column-end: 5;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  justify-self: end;
   z-index: -1;
 
-  overflow: hidden;
   @media screen and (max-width: 800px) {
-    position: absolute;
-    top: 0;
-
-    z-index: -1;
-    margin-top: 0rem;
-    overflow: hidden;
   }
 `;
 
 export const Image = styled.img`
-  position: absolute;
-  object: center;
-  height: calc(100vh - 12rem);
-  z-index: -1;
-  filter: grayscale(100%);
+  height: 100vh;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: baseline;
+  filter: grayscale(50%) brightness(70%);
 `;

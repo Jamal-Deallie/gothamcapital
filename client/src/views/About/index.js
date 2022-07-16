@@ -1,27 +1,20 @@
 import { Jumbotron } from '../../components';
 
 import {
-  StoryContainer,
-  ValuesContainer,
-  ObjectiveContainer,
+  DiversityContainer,
   CommunityContainer,
   VisionContainer,
   PrinciplesContainer,
-  PhilosophyContainer,
+  AboutJumboContainer
 } from '../../containers';
 
 export default function AboutPage() {
   return (
     <>
-      <Jumbotron title='About Us' />
-      <StoryContainer />
-      {/* <ValuesContainer /> */}
-
+      <AboutJumboContainer/>
       <CommunityContainer />
-
-      <ObjectiveContainer />
+      <DiversityContainer />
       <PrinciplesContainer />
-
       <VisionContainer />
     </>
   );

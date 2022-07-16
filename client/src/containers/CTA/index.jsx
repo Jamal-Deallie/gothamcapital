@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Input } from '../../components';
 import {
   Section,
@@ -12,6 +13,22 @@ import {
 } from './styles';
 
 export default function CTAContainer() {
+  const [formValue, setFormValue] = useState({
+    email: '',
+    name: '',
+    inquiry: '',
+  });
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+    setFormValue(prevState => {
+      return {
+        ...prevState,
+        [name]: value,
+      };
+    });
+  };
+  
   return (
     <Section>
       <GridContainer>
@@ -24,10 +41,8 @@ export default function CTAContainer() {
         </Container>
         <Form>
           <FormContainer>
-        
-              <StyledInput placeholder='Enter Email Address' />
-              <Button />
-    
+            <StyledInput placeholder='Enter Email Address' />
+            <Button />
           </FormContainer>
         </Form>
       </GridContainer>

@@ -1,103 +1,171 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  padding: 9.5rem 0 12rem 0;
   width: 100%;
-  background-color: ${props => props.theme.variant.primary};
 `;
 export const Wrapper = styled.div`
+  padding: 1rem;
+  max-width: 150rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+export const GridContainer = styled.div`
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10rem;
+  overflow: hidden;
+  max-width: 120rem;
+
+  @media screen and (max-width: 40rem) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+`;
+
+export const InnerContainer = styled.div`
+  padding: calc(2px + 1.5625vw);
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Heading = styled.h1`
-  color: ${props => props.theme.variant.secondary};
-  padding-top: 5rem;
-  text-align: center;
-`;
-export const StatText = styled.div`
   color: ${props => props.theme.variant.primary};
+  font-family: ${props => props.theme.fontFamily.main};
   padding: 2.5rem 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-`;
-
-export const Text = styled.p`
-  color: ${props => props.theme.variant.secondary};
-  font-size: clamp(1.44rem, calc(1.16rem + 1.38vw), 2.15rem);
-  padding-bottom: 2.5rem;
-`;
-export const Caption = styled.p`
-  color: ${props => props.theme.variant.secondary};
-  font-size: 1.618rem;
-  width: 30ch;
-  padding-bottom: 1rem;
-`;
-
-export const StatTitle = styled.p`
-  color: ${props => props.theme.variant.primary};
-  font-size: clamp(2.07rem, calc(1.57rem + 2.5vw), 3.36rem);
-  font-weight: 300;
-  max-width: 30ch;
-  line-height: 1.5;
-  & .lineParent {
-    overflow: hidden;
-    & .lineChildren {
-      transform: 0rem;
-    }
+  text-transform: uppercase;
+  text-align: left;
+  & .lineHeader {
+    transform: 0rem;
+    font-family: ${props => props.theme.fontFamily.main};
   }
 `;
 
-export const Desc = styled.p`
-  color: ${props => props.theme.variant.primary};
-  font-size: clamp(1.2rem, calc(0.81rem + 1.93vw), 2.19rem);
-  letter-spacing: 0.5px;
-  padding-bottom: 5rem;
-`;
-
-export const Image = styled.img`
-  width: 100%;
-`;
-
 export const Button = styled.button`
-  background-color: ${props => props.theme.variant.primary};
-  border: 0;
-  border-radius: 0.3rem;
-  color: #fff;
+  background: none;
+  backface-visibility: hidden;
+  border-radius: 0.375rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  box-sizing: border-box;
+  color: ${props => props.theme.variant.primary};
   cursor: pointer;
   display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
-  outline: 0;
-  padding: 16px 21px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  padding: 0.875rem 1.125rem;
   position: relative;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
-  transition: all 0.3s;
+  transform: translateZ(0) scale(1);
+  transition: transform 0.2s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 `;
 
-export const GroupImage = styled.img`
-  filter: grayscale(100%);
-  height: 100%;
+export const Title = styled.p`
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: ${props => props.theme.variant.primary};
+  text-align: left;
 `;
 
-export const ImageWrapper = styled.div``;
-export const StatContainer = styled.div``;
+export const Desc = styled.p`
+  font-size: 1.8rem;
+  font-family: ${props => props.theme.fontFamily.main};
+  color: ${props => props.theme.variant.tertiary};
+  font-style: italic;
+  line-height: 1.5;
+  text-align: left;
+`;
+
+export const ImageWrapper = styled.div`
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+export const Image = styled.img`
+  width: 100%;
+  max-width: 45.5rem;
+  filter: grayscale(100%);
+`;
+
+export const SubTitle = styled.p``;
+
+export const SubHeader = styled.p`
+  color: ${props => props.theme.variant.primary};
+  font-family: ${props => props.theme.fontFamily.main};
+  text-transform: capitalize;
+  font-style: italic;
+  line-height: 1.5;
+  font-size: 3.2rem;
+  font-weight: 400;
+`;
+
+export const Number = styled.p`
+  font-family: ${props => props.theme.fontFamily.main};
+  font-size: clamp(2.25rem, calc(1.93rem + 1.58vw), 3.91rem);
+  color: ${props => props.theme.variant.primary};
+`;
+
+export const Icon = styled.img`
+  height: 7.5rem;
+`;
+
+export const Text = styled.p`
+  font-size: 1.6rem;
+  font-family: ${props => props.theme.fontFamily.main};
+  color: ${props => props.theme.variant.tertiary};
+  width: 55ch;
+  font-style: italic;
+  line-height: 1.5;
+`;
+
+export const Inner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+export const Outer = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const OuterCircle = styled.div`
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: ${props => props.theme.variant.primary};
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+`;
+
+export const Circle = styled.div`
+  position: relative;
+  height: 200px;
+  width: 200px;
+`;
+
+export const StatSection = styled.div`
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  width: 25rem;
+`;
 
 export const SVGCircle = styled.svg`
   /* stroke-dasharray: 577;
@@ -108,72 +176,19 @@ export const SVGCircle = styled.svg`
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
-  height: 320px;
-  width: 320px;
-`;
-export const StatOuter = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-  flex-wrap: wrap;
-  flex-direction: ${props => props.$flexDirection || 'row'};
+  height: 25rem;
+  width: 25rem;
 `;
 
-export const StatInner = styled.div`
-  position: relative;
-  height: 500px;
-  width: 500px;
-`;
-
-export const StatSection = styled.div`
-  background: ${props => props.theme.variant.secondary};
+export const RowContainer = styled.div`
   width: 100%;
+  grid-gap: 3.5rem;
+  display: grid;
 `;
 
-export const StatWrapper = styled.div`
-  position: relative;
-  max-width: 120rem;
-  margin: 0 auto;
-`;
-
-export const ContentInner = styled.div`
-  padding: 5rem;
-`;
-
-export const ContentOuter = styled.div``;
-
-export const Statistic = styled.div``;
-
-export const Stat = styled.h1`
-  display: inline-block;
-  font-size:clamp(4.68rem, calc(3.57rem + 5.54vw),30.52rem);
-`;
-
-export const Percent = styled.h1`
-  display: inline-block;
-  font-size:clamp(4.68rem, calc(3.57rem + 5.54vw),10.52rem);
-`;
-
-export const BarOuter = styled.div`
-  margin-top: 2.5rem;
-  width: 100%;
-  height: 5.5rem;
-  background: #2f3539;
-  border-radius: 5rem;
-  /* border: 5px solid black; */
-  /* box-sizing: border-box; */
+export const Container = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
-`;
-
-export const BarInner = styled.div`
-  width: ${props => props.$stat || 0};
-  height: 4rem;
-  background: ${props => props.theme.variant.primary};
-  border-radius: 5rem 0 0 5rem;
-  display: block;
-  margin-left: .5rem;
 `;
