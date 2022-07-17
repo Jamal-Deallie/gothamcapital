@@ -10,6 +10,8 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const cookieParser = require('cookie-parser');
 const app = express();
+const dotenv = require('dotenv');
+require('dotenv').config();
 
 // 1) MIDDLEWARES
 app.use(
