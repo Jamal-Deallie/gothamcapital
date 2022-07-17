@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-
-dotenv.config({ path: './env' });
+require('dotenv').config();
 const app = require('./app.js');
 
 const DB = process.env.DATABASE.replace(
