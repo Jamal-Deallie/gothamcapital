@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const client = axios.create({
-  baseURL: "http://localhost:4000/api/test" 
+  baseURL: "https://gotham-capital.herokuapp.com/api/test" 
 });
