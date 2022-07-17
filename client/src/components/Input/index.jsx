@@ -5,7 +5,6 @@ export default function Input() {
   return (
     <Form>
       <Container>
-        {/* The input */}
         <StyledInput
           placeholder='Enter Email Address'
         />

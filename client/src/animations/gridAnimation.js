@@ -66,7 +66,6 @@ let tl = gsap.timeline({
     trigger: containerElem,
     start: 'top center',
     end: 'bottom 30px',
-    toggleActions: 'play none none reset',
     animation: tl,
   });
   return () => {

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Input } from '../../components';
 import {
   Section,
   Heading,
@@ -13,22 +12,16 @@ import {
 } from './styles';
 
 export default function CTAContainer() {
-  const [formValue, setFormValue] = useState({
-    email: '',
-    name: '',
-    inquiry: '',
-  });
+  const [email, setEmail] = useState('');
 
-  const handleChange = event => {
-    const { name, value } = event.target;
-    setFormValue(prevState => {
-      return {
-        ...prevState,
-        [name]: value,
-      };
-    });
-  };
-  
+  function handleChange(event) {
+    setEmail(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    return null;
+  }
+
   return (
     <Section>
       <GridContainer>
@@ -39,10 +32,15 @@ export default function CTAContainer() {
             insights and research on the crypto markets.
           </Text>
         </Container>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <FormContainer>
-            <StyledInput placeholder='Enter Email Address' />
-            <Button />
+            <StyledInput
+              placeholder='Enter Email Address'
+              type='email'
+              onChange={handleChange}
+              value={email}
+            />
+            <Button type='submit' />
           </FormContainer>
         </Form>
       </GridContainer>

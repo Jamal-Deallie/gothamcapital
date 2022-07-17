@@ -3,7 +3,7 @@ import { GridLayout } from '../../components';
 export default function CultureContainer() {
   return (
     <GridLayout
-      heading='Our Culture'
+      heading='We rely on sound economic theory'
       desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 in semper ex, in ullamcorper turpis. Nunc in mollis ex. Sed vel
                 libero id neque varius maximus a quis dolor. Phasellus

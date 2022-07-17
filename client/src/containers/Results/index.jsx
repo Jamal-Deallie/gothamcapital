@@ -46,7 +46,7 @@ export default function ResultsContainer() {
 
   let stats = ResultsItems.map(a => a.stat);
 
-  console.log(stats);
+
 
   useIsomorphicLayoutEffect(() => {
     numbersAnimation(
@@ -78,5 +78,3 @@ export default function ResultsContainer() {
   );
 }
 
-//89%
-//15

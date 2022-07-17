@@ -1,6 +1,6 @@
 import { FundsContainer, FundsJumboContainer } from '../../containers';
 
-export default function AboutPage() {
+export default function FundsPage() {
   return (
     <>
       <FundsJumboContainer />

@@ -60,8 +60,6 @@ export const ApartItems = [
   },
 ];
 
-
-
 export const ServicesItems = [
   {
     id: 1,
@@ -214,32 +212,30 @@ export const CommunityData = [
   },
 ];
 
-
-
 export const FooterItems = [
   {
     id: 1,
-    link: '/about',
+    link: 'about',
     label: 'About',
   },
   {
     id: 2,
-    link: '/approach',
-    label: 'Approach',
-  },
-  {
-    id: 3,
-    link: '/ourteams',
+    link: 'ourteams',
     label: 'Our Team',
   },
   {
-    id: 4,
-    link: '/funds',
+    id: 3,
+    link: 'funds',
     label: 'Funds',
   },
   {
+    id: 4,
+    link: 'faqs',
+    label: 'Faqs',
+  },
+  {
     id: 5,
-    link: '/contactus',
+    link: 'contactus',
     label: 'Contact Us',
   },
   {
@@ -323,61 +319,71 @@ export const EmployeeItems = [
     id: 1,
     department: 'Investment Management',
     name: 'Employee-1',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052800/gotham_capital/Employee-1_rhprmi.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052800/gotham_capital/Employee-1_rhprmi.png',
   },
   {
     id: 2,
     department: 'Operations',
     name: 'Employee-2',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-2_h3aml7.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-2_h3aml7.png',
   },
   {
     id: 3,
     department: 'Operations',
     name: 'Employee-3',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052798/gotham_capital/Employee-3_vursed.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052798/gotham_capital/Employee-3_vursed.png',
   },
   {
     id: 4,
     department: 'Operations',
     name: 'Employee-4',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052797/gotham_capital/Employee-4_xmiimx.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052797/gotham_capital/Employee-4_xmiimx.png',
   },
   {
     id: 5,
     department: 'Operations',
     name: 'Employee-5',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052798/gotham_capital/Employee-5_oxx1dc.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052798/gotham_capital/Employee-5_oxx1dc.png',
   },
   {
     id: 6,
     department: 'Human Capital',
     name: 'Employee-6',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-6_yhgmqj.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-6_yhgmqj.png',
   },
   {
     id: 7,
     department: 'Human Capital',
     name: 'Employee-7',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-7_ibyubm.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-7_ibyubm.png',
   },
   {
     id: 8,
     department: 'Human Capital',
     name: 'Employee-8',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052800/gotham_capital/Employee-8_mijrpr.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052800/gotham_capital/Employee-8_mijrpr.png',
   },
   {
     id: 9,
     department: 'Information Technology',
     name: 'Employee-9',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-9_zepuno.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052799/gotham_capital/Employee-9_zepuno.png',
   },
   {
     id: 10,
     department: 'Information Technology',
     name: 'Employee-10',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052800/gotham_capital/Employee-10_x1guee.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052800/gotham_capital/Employee-10_x1guee.png',
   },
   {
     id: 11,
@@ -401,7 +407,8 @@ export const EmployeeItems = [
     id: 14,
     department: 'Marketing',
     name: 'Employee-14',
-    imgUrl: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052802/gotham_capital/Employee-14_ijggbg.png',
+    imgUrl:
+      'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1650052802/gotham_capital/Employee-14_ijggbg.png',
   },
   {
     id: 15,
@@ -443,7 +450,6 @@ export const ServeItems = [
     text: 'Lorem ipsum dolor sit amet, consete adipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
   },
 ];
-
 
 export const FocusItems = [
   {
@@ -537,16 +543,16 @@ export const OfficeItems = [
   {
     id: 1,
     number: 52,
-    header: 'Fields of academic study'
+    header: 'Fields of academic study',
   },
   {
     id: 2,
     number: 19,
-    header: 'Years our senior investment professionals have worke together'
+    header: 'Years our senior investment professionals have worke together',
   },
   {
     id: 3,
     number: 26,
-    header: 'Languages Spoken'
+    header: 'Languages Spoken',
   },
-]
+];

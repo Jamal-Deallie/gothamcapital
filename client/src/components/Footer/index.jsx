@@ -19,7 +19,7 @@ import {
 import { FooterItems, SocialMediaItems } from '../../shared/sharedData';
 import { ScrollButton } from '../../components';
 import { Link } from 'react-router-dom';
-import { Button } from '../Navigation/styles';
+
 
 export default function Footer() {
   const groupOneLinks = FooterItems.slice(0, 3).map(item => {

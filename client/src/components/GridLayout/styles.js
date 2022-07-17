@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: ${props => (props.$pad ? props.$pad : '9.5rem 0 12rem 0')};
+  padding: ${props => (props.$pad ? props.$pad : '8.5rem 0 8.5rem 0')};
   width: 100%;
 `;
 
@@ -12,15 +12,20 @@ export const GridContainer = styled.div`
   grid-gap: 5rem;
   overflow: hidden;
   max-width: 120rem;
-
-  @media screen and (max-width: 40rem) {
+  @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 `;
 
 export const InnerContainer = styled.div`
+  margin-top: calc(0.5rem + 2vw);
   padding: calc(2px + 1.5625vw);
+  white-space: pre-line;
+  @media screen and (max-width: 800px) {
+    margin: 0 auto;
+    max-width: 60rem;
+  }
 `;
 
 export const ContentContainer = styled.div``;
@@ -43,6 +48,7 @@ export const Desc = styled.p`
   color: ${props => props.theme.variant.tertiary};
   line-height: 1.5;
   text-align: left;
+  white-space: pre-line;
   @media screen and (max-width: 800px) {
     text-align: center;
   }

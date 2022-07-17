@@ -2,14 +2,10 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   width: 100%;
-
   background: url(images/general/mesh-gradient.png);
 `;
 
 export const ContentContainer = styled.div`
-
-
-
   margin: 0 auto;
   max-width: 140rem;
   padding: calc(2px + 1.5625vw);
@@ -39,6 +35,11 @@ export const Wrapper = styled.div`
   gap: 4rem;
   justify-items: center;
   align-items: center;
+  @media screen and (max-width: 800px) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: none;
+    grid-gap: 0;
+  }
 `;
 
 export const Stat = styled.p`
@@ -125,10 +126,13 @@ export const OuterContainer = styled.div`
 `;
 
 export const Heading = styled.h1`
-padding-top: 4.5rem;
+  padding-top: 4.5rem;
   color: ${props => props.theme.variant.secondary};
   font-family: ${props => props.theme.fontFamily.heading};
   font-size: clamp(2.16rem, calc(1.17rem + 4.93vw), 4.69rem);
   overflow: hidden;
   line-height: 1.2;
+  @media screen and (max-width: 800px) {
+    text-align: center;
+  }
 `;

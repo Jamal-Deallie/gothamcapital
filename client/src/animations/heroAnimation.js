@@ -33,7 +33,6 @@ export const heroAnimation = (headingElem, containerElem) => {
 
   let st = ScrollTrigger.create({
     trigger: containerElem,
-    markers: true,
     start: 'top center',
     end: 'bottom 30px',
     animation: tl,

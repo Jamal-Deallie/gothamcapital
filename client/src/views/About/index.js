@@ -1,5 +1,3 @@
-import { Jumbotron } from '../../components';
-
 import {
   DiversityContainer,
   CommunityContainer,

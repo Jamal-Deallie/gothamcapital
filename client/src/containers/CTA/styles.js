@@ -27,19 +27,24 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    text-align: center;
+  }
 `;
 
 export const GridContainer = styled.div`
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 10rem;
   overflow: hidden;
   max-width: 120rem;
   padding: calc(8px + 1.5625vw);
-  @media screen and (max-width: 40rem) {
+  @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-gap: 2.5rem;
+    align-items: center;
+    justify-items: center;
   }
 `;
 
@@ -48,13 +53,12 @@ export const FormContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
 `;
 
 export const Form = styled.form`
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  display: flex;
+  align-items: center;
 `;
 
 export const InputWrap = styled.div`
@@ -74,8 +78,6 @@ export const StyledInput = styled.input`
   color: ${props => props.theme.variant.secondary};
   width: 35rem;
   border-bottom: 1px solid ${props => props.theme.variant.secondary};
-
-
   &::placeholder {
     color: ${props => props.theme.variant.secondary};
     font-family: ${props => props.theme.fontFamily.main};
