@@ -10,7 +10,14 @@ export const useAxios = axiosParams => {
 
   const fetchData = async params => {
     try {
-      const result = await axios.request(params);
+      const options = {
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
+        },
+      };
+      const result = await axios.request(params, options);
       setResponse(result.data);
     } catch (error) {
       setError(error);

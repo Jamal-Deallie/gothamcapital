@@ -16,7 +16,7 @@ require('dotenv').config();
 // 1) MIDDLEWARES
 app.use(
   cors({
-    origin: process.env.WEB_APP_URL,
+    origin: 'https://gothamcapital.vercel.app',
   })
 );
 
