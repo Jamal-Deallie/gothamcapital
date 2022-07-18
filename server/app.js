@@ -3,7 +3,6 @@ const fundRouter = require('./routes/fundsRoutes');
 const registrationRouter = require('./routes/registrationRoutes');
 const contactRouter = require('./routes/contactRoutes');
 const employeeRouter = require('./routes/employeeRoutes');
-const cors = require('cors');
 const AppError = require('./utils/appError');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
@@ -14,11 +13,6 @@ const dotenv = require('dotenv');
 require('dotenv').config();
 
 // 1) MIDDLEWARES
-app.use(
-  cors({
-    origin: 'https://gothamcapital.vercel.app',
-  })
-);
 
 app.use((req, res, next) => {
   console.log('Hello from the middleware 👋');
