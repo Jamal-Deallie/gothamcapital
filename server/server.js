@@ -1,26 +1,50 @@
-const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 require('dotenv').config();
-const app = require('./app.js');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const connectDB = require('./config/dbConn');
+const fundRouter = require('./routes/fundsRoutes');
+const registrationRouter = require('./routes/registrationRoutes');
+const contactRouter = require('./routes/contactRoutes');
+const employeeRouter = require('./routes/employeeRoutes');
+const mongoSanitize = require('express-mongo-sanitize');
+const helmet = require('helmet');
+const app = express();
+const cors = require('cors');
+const xss = require('xss-clean');
 
-const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
+connectDB();
+
+app.use(
+  cors({
+    origin: process.env.WEB_APP_URL,
+  })
 );
 
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(con => {
-    console.log(con.connections);
-    console.log('DB connection successful!');
-  })
-  .catch(() => error => console.log(error.message));
+app.use(helmet());
+app.use(express.json({ limit: '25mb' }));
+app.use(express.urlencoded({ limit: '25mb' }));
+app.use(cookieParser());
+app.use(mongoSanitize());
+app.use(xss());
 
-const port = process.env.PORT || 4001;
+app.use((req, res, next) => {
+  console.log('middleware check');
+  next();
+});
 
-app.listen(port, () => {
+app.use('/api/test/v1/funds', fundRouter);
+app.use('/api/test/v1/registration', registrationRouter);
+app.use('/api/test/v1/employee', employeeRouter);
+app.use('/api/test/v1/contactus', contactRouter);
+
+app.get('/', function (req, res) {
+  res.send({ status: 'success' });
+});
+
+const port = process.env.PORT || 5001;
+
+const server = app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });

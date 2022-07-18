@@ -9,8 +9,15 @@ export const useAxios = axiosParams => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = async params => {
+    const options = {
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      },
+    };
     try {
-      const result = await axios.request(params);
+      const result = await axios.request(params, options);
       setResponse(result.data);
     } catch (error) {
       setError(error);
