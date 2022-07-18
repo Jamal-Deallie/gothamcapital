@@ -11,7 +11,7 @@ export const useAxios = axiosParams => {
   const fetchData = async params => {
     try {
       const options = {
-        mode: 'no-cors',
+        mode: 'cors',
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
