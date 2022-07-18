@@ -1,6 +1,5 @@
 export { default as Navigation } from './Navigation';
 export { default as Footer } from './Footer';
-export { default as SecondaryButton } from './SecondaryButton';
 export { default as Input } from './Input';
 export { default as Jumbotron } from './Jumbotron';
 export { default as Table } from './Table';

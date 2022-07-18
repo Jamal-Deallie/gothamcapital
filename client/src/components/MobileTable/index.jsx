@@ -1,11 +1,8 @@
 import React from 'react';
 import {
-  FundStats,
   FundDetails,
   FundHeader,
   Ticker,
-  StatContainer,
-  HeaderContainer,
   FundColumn,
   FundName,
   FundFooter,

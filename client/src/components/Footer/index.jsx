@@ -3,8 +3,6 @@ import {
   FooterSection,
   Heading,
   Wrapper,
-  Border,
-  TopRow,
   SecondRow,
   LinkContainer,
   IconContainer,
@@ -19,7 +17,6 @@ import {
 import { FooterItems, SocialMediaItems } from '../../shared/sharedData';
 import { ScrollButton } from '../../components';
 import { Link } from 'react-router-dom';
-
 
 export default function Footer() {
   const groupOneLinks = FooterItems.slice(0, 3).map(item => {
@@ -49,9 +46,7 @@ export default function Footer() {
   return (
     <FooterSection>
       <ButtonContainer>
-
-      <ScrollButton />
-
+        <ScrollButton />
       </ButtonContainer>
       <Container>
         <Wrapper>
@@ -71,7 +66,6 @@ export default function Footer() {
         <FourthRow>
           <Text>©2022 Gotham Capital</Text>
         </FourthRow>
-
       </Container>
     </FooterSection>
   );

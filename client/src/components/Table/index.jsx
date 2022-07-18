@@ -6,12 +6,10 @@ import {
   TableBody,
   ColumnItem,
   StyledContainer,
-  SortIcon,
   ItemWrapper,
   Disclaimer,
   DisclaimerWrapper,
 } from './styles';
-import React, { useState } from 'react';
 import { Loader } from '../../components';
 
 export default function Table({ items, loading }) {

@@ -7,7 +7,7 @@ import {
   SearchBarWrapper,
   SearchBar,
   SearchIcon,
-  Text,
+
 } from './styles';
 import useDebounce from '../../hooks/useDebounce';
 import EmployeeContainer from '../Employees';

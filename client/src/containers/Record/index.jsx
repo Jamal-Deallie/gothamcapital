@@ -1,21 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import {
-  ContentContainer,
-  Container,
-  Desc,
-  GridContainer,
-  Heading,
-  Image,
-  InnerContainer,
-  Section,
-} from './styles';
 import { GridLayout } from '../../components';
-import useArrayRef from '../../hooks/useArrayRef';
 
 export default function ApartContainer() {
-  const headerRef = useRef();
-  const containerRef = useRef();
-
   return (
     <GridLayout
       heading='Never Made Investing So Easy'

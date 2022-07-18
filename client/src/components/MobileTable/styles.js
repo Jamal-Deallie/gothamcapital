@@ -15,24 +15,10 @@ export const FundDetails = styled.div`
   height: 12.5rem;
 `;
 
-export const FundStats = styled.section`
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: normal;
-  font-family: ${props => props.theme.fontFamily.main};
-  font-size: 12px;
-  line-height: 16px;
-  padding-top: 16px;
-`;
-
 export const FundHeader = styled.header`
   display: flex;
   height: 6.5rem;
 `;
-
-export const HeaderContainer = styled.div``;
 
 export const Ticker = styled.div`
   font-size: 1.25rem;
@@ -58,7 +44,6 @@ export const FundName = styled.div`
   padding: 1.6rem;
 `;
 
-export const StatContainer = styled.div``;
 
 export const FundFooter = styled.footer`
   padding-top: 16px;

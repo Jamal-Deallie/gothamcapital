@@ -41,18 +41,6 @@ export const SearchIcon = styled.img`
   z-index: 1;
 `;
 
-export const Options = styled.button`
-  background: ${props => props.theme.variant.secondary};
-  color: ${props => props.theme.variant.primary};
-  height: 40px;
-  width: 150px;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-`;
-
 export const OptionsContainer = styled.div`
   display: flex;
   align-items: flex-end;
@@ -78,41 +66,6 @@ export const InnerContainer = styled.div`
   padding: calc(8px + 1.5625vw);
 `;
 
-export const OptionsInner = styled.div`
-  position: relative;
-`;
-
-export const OptionsOuter = styled.div`
-  display: flex;
-  gap: 25px;
-`;
-
-export const Option = styled.div`
-  background: ${props => props.theme.variant.secondary};
-  color: ${props => props.theme.variant.primary};
-  height: 40px;
-  width: 150px;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-`;
-
-export const DropDownOptions = styled.div`
-
-  position: absolute;
-
-  flex-direction: column;
-  z-index: 1;
-  top: 50px;
-  transform-origin: top center
-  display: inline-block;
-  transition: 0.2s display opacity;
-  display: ${props => (props.$open ? 'flex' : 'none')};
-  opacity: ${props => (props.$open ? 1 : 0)};
-`;
 
 export const TableContainer = styled.div`
   display: flex;
@@ -122,27 +75,5 @@ export const TableContainer = styled.div`
   }
 `;
 
-export const Arrow = styled.svg.attrs({
-  xmlns: 'http://www.w3.org/2000/svg',
-})`
-  height: 2.5rem;
-  transition: all 0.3 ease-in-out;
-  /* transform: ${props => (props.filterOpen ? 'rotate(45deg)' : null)}; */
-  fill: #f7b92d;
-  cursor: pointer;
-`;
 
-const IconWrapper = styled.button`
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 2rem;
-  pointer-events: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
-export const Label = styled.label`
-  display: block;
-`;

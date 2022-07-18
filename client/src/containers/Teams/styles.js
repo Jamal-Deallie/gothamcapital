@@ -14,11 +14,6 @@ export const Heading = styled.h1`
   text-align: left;
   margin-bottom: 3.5rem;
 `;
-export const Text = styled.p`
-  color: ${props => props.theme.variant.primary};
-  font-family: ${props => props.theme.fontFamily.main};
-  font-style: italic;
-`;
 
 export const OuterContainer = styled.div`
   width: 100%;

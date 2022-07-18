@@ -32,18 +32,6 @@ export const Wrapper = styled.div`
   flex-direction: ${props => props.$flexDirection || 'row'};
 `;
 
-export const Border = styled.div`
-  height: 2px;
-
-  background: ${props => props.theme.variant.primary};
-`;
-
-export const TopRow = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const SecondRow = styled.div`
   display: flex;
   justify-content: center;

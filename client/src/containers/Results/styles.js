@@ -16,16 +16,6 @@ export const ContentContainer = styled.div`
   flex-direction: column;
 `;
 
-export const Percentage = styled.span`
-  color: ${props => props.theme.variant.secondary};
-  font-family: ${props => props.theme.fontFamily.main};
-`;
-
-export const Number = styled.span`
-  color: ${props => props.theme.variant.secondary};
-  font-family: ${props => props.theme.fontFamily.main};
-`;
-
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -68,44 +58,6 @@ export const CaptionContainer = styled.div`
   overflow: hidden;
 `;
 
-export const Text = styled.p`
-  color: ${props => props.theme.variant.secondary};
-  text-align: center;
-`;
-
-export const Title = styled.p`
-  color: ${props => props.theme.variant.secondary};
-  font-size: 1.8rem;
-  font-weight: 800;
-  text-align: left;
-`;
-
-export const Desc = styled.p`
-  color: ${props => props.theme.variant.primary};
-  font-size: 2.4rem;
-  padding-bottom: 2.5rem;
-  text-align: center;
-`;
-
-export const Placeholder = styled.div`
-  width: 800px;
-  height: 400px;
-  border: solid 1px rgba(0, 0, 0, 1);
-`;
-
-export const PlaceholderTitle = styled.p`
-  text-align: center;
-`;
-
-export const Image = styled.img`
-  width: 45vw;
-`;
-
-export const Subheader = styled.p`
-  font-size: 18px;
-  font-weight: 600;
-`;
-
 export const Caption = styled.p`
   margin-top: 2.5rem;
   font-size: 1.4rem;
@@ -114,15 +66,6 @@ export const Caption = styled.p`
   line-height: 1.5;
   color: ${props => props.theme.variant.secondary};
   font-style: italic;
-`;
-
-export const ResultContainer = styled.div``;
-
-export const Results = styled.p``;
-
-export const OuterContainer = styled.div`
-  display: flex;
-  align-items: center;
 `;
 
 export const Heading = styled.h1`

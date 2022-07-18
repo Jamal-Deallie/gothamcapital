@@ -31,7 +31,7 @@ export default function GridLayout({
       imageRef.current,
       containerRef.current
     );
-  }, [gridAnimation]);
+  }, []);
 
   
   return (
